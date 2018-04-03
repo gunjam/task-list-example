@@ -1,0 +1,48 @@
+<include('../../layout') page-title="GOV.UK Task List Pattern">
+  <@content>
+
+    <div.grid-row>
+      <div.column-two-thirds>
+
+        <h1.heading-large>
+          Service name goes here
+        </h1>
+
+        $ const showMedical = true;
+        $ const showEmail = true;
+        $ const showMobile = false;
+
+        <bsp-tabs>
+          <@tab title="Tasks to complete">
+            <gov-task-list>
+              <@task-section title="Check before you start">
+                <@task name="Check eligibility" href="#" completed=true/>
+                <@task name="Read declaration" href="#" completed=true/>
+              </@task-section>
+              <@task-section title="Prepare application">
+                <@task name="Company information" href="#" completed=true/>
+                <@task name="Your contact details" href="#" completed=true/>
+                <@task name="List convictions" href="#" completed=true/>
+                <@task name="Provide financial evidence" href="#"/>
+                <@task if(showMedical) name="Give medical information" href="#"/>
+              </@task-section>
+              <@task-section title="Apply">
+                <@task name="Submit and pay" href="#"/>
+              </@task-section>
+            </gov-task-list>
+          </@tab>
+          <@tab title="Claim details">
+            <bsp-summary>
+              <@item name="Full name" value="Hammond Eggs"/>
+              <@item name="Date of birth" value="20 December 1989"/>
+              <@item if(showEmail) name="Email" value="fake@fake.fake"/>
+              <@item if(showMobile) name="Mobile" value="555000000000"/>
+            </bsp-summary>
+          </@tab>
+        </bsp-tabs>
+
+      </div>
+    </div>
+
+  </@content>
+</include>

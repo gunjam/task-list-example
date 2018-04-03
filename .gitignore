@@ -1,0 +1,14 @@
+# Dependency directory
+node_modules
+
+# .DS_Store files
+.DS_Store
+
+# Static files, compiled sass, GOV.UK css, js, etc
+static
+
+# Compiled marko templates
+*.marko.js
+
+# Lasso cache
+.cache

@@ -1,0 +1,21 @@
+<ol.task-list>
+  <li for(taskSectionIndex, taskSection in input.taskSections)>
+    <h3.task-list-section>
+      <span.task-list-section-number>${taskSectionIndex + 1}. </span>
+      ${taskSection.title}
+    </h3>
+    <ul.task-list-items>
+      <li.task-list-item for(taskIndex, task in taskSection.tasks)>
+        $ const taskId = `task-${taskSectionIndex}-${taskIndex}`;
+
+        <a.task-name href=task.href aria-describedby=(task.completed && taskId)>
+          ${task.name}
+        </a>
+
+        <strong if(task.completed) class="task-completed" id=taskId>
+          Completed
+        </strong>
+      </li>
+    </ul>
+  </li>
+</ol>

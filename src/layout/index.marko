@@ -1,0 +1,42 @@
+<include('govuk-template-marko')
+  page-title=input.pageTitle
+  skip-link-message="Skip to main content"
+  header-class="with-proposition"
+  html-lang="en">
+
+  <!-- Black header section of GOV.UK template -->
+  <@proposition-header>
+    <div class="header-proposition">
+      <div class="content">
+        <div id="proposition-menu">
+          <a href="/" id="proposition-name">
+            Task list example
+          </a>
+        </div>
+      </div>
+    </div>
+  </@proposition-header>
+
+  <!-- Main body content -->
+  <@content>
+
+    <main.group#content role="main">
+      <include(input.content)/>
+    </main>
+
+  </@content>
+
+  <!-- OGL licence of footer in GOV.UK template -->
+  <@licence-message>
+    <p>
+      All content is available under the <a href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/' rel='license'>Open Government Licence v3.0</a>,
+      except where otherwise stated.
+    </p>
+  </@licence-message>
+
+  <!-- Copyright content in GOV.UK template footer -->
+  <@crown-copyright-message>
+    © Crown copyright
+  </@crown-copyright-message>
+
+</include>

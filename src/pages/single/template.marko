@@ -1,0 +1,22 @@
+<include('../../layout') page-title="Summary">
+  <@content>
+
+    <div.grid-row>
+      <div.column-two-thirds>
+
+        <h1.heading-large>
+          Service name goes here
+        </h1>
+
+        <bsp-summary>
+          <@item name="Full name" value="Hammond Eggs"/>
+          <@item name="Date of birth" value="20 December 1989"/>
+          <@item if(true) name="Email" value="fake@fake.fake"/>
+          <@item if(false) name="Mobile" value="555000000000"/>
+        </bsp-summary>
+
+      </div>
+    </div>
+
+  </@content>
+</include>

@@ -1,0 +1,32 @@
+<include('../../layout') page-title="GOV.UK Task List Pattern">
+  <@content>
+
+    <div.grid-row>
+      <div.column-two-thirds>
+
+        <h1.heading-large>
+          Service name goes here
+        </h1>
+
+        <gov-task-list>
+          <@task-section title="Check before you start">
+            <@task name="Check eligibility" href="#" completed=true/>
+            <@task name="Read declaration" href="#" completed=true/>
+          </@task-section>
+          <@task-section title="Prepare application">
+            <@task name="Company information" href="#" completed=true/>
+            <@task name="Your contact details" href="#" completed=true/>
+            <@task name="List convictions" href="#" completed=true/>
+            <@task if(false) name="Provide financial evidence" href="#"/>
+            <@task if(true) name="Give medical information" href="#"/>
+          </@task-section>
+          <@task-section title="Apply">
+            <@task name="Submit and pay" href="#"/>
+          </@task-section>
+        </gov-task-list>
+
+      </div>
+    </div>
+
+  </@content>
+</include>

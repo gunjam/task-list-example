@@ -1,0 +1,21 @@
+{
+  "name": "task-list-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "govuk-elements-sass": "^3.1.2",
+    "govuk-template-marko": "^3.0.0",
+    "jquery": "^3.3.1",
+    "lasso": "^3.1.4",
+    "lasso-marko": "^2.4.0",
+    "lasso-sass": "^3.0.0",
+    "marko": "~4.7.5"
+  }
+}
